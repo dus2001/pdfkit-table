@@ -484,6 +484,7 @@ class PDFDocumentWithTables extends PDFDocument {
           } else if(calc > maxY) { // && !lockAddPage
             // lockAddHeader = false;
             lockAddPage = true;
+            lockAddPage = false; // https://github.com/natancabral/pdfkit-table/issues/49#issuecomment-1985590453
             onFirePageAdded(); // this.emitter.emit('addPage'); //this.addPage();
             return;
           } 
